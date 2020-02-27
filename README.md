@@ -86,7 +86,7 @@ Just run the exercise files in node! There are no dependencies or special script
 
 Each time you run an exercise file, a report will be generated.  It's helpful to open this file and split your editor, with the code on one side and the report on the other.  Each time you run your code, the report will update with the most recent test results.  Seeing the results side-by-side with your code will make debugging and understanding your code a little easier.
 
-In the console you will find logs for any syntax errors and failing `console.asserts` in your function.  Information on each test case (pass, fail or error) will be written to the report file.
+In the console you will find logs for any syntax errors, failing `console.asserts` or `console.logs` from in your function.  Information on each test case (pass, fail or error) will be written to the report file.
 
 
 [TOP](#early-return)

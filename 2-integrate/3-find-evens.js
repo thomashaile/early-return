@@ -20,6 +20,7 @@ const findAllEvensTests = [
 ];
 
 const findAllEvens = (arr) => {
+  debugger;
   // write me!
 };
 
