@@ -1,4 +1,4 @@
-const evaluate = require('../evaluate.');
+const evaluate = require('../evaluate');
 
 const thingsToNumber1 = ['.', '1', '2', ':'];
 const thingsToNumber2 = ['1', 'two', 'three', '10'];
