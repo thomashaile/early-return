@@ -18,6 +18,7 @@ const evaluate = (func, testCases) => {
   let failing = 0;
   let error = 0;
   for (let test of testCases) {
+    console.log('\n-- ' + test.name + ': console output --\n');
     let testResult = '\n' + test.name + '';
     try { // catch any errors the function might throw
       const actual = func(...test.args);

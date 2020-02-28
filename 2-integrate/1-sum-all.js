@@ -23,6 +23,7 @@ const sumAllTests = [
 const sumAll = (arr) => {
   // write me!
   // Hint: early return - are there any non-numbers?
+  arr.forEach(e => console.log(e))
 };
 
 evaluate(sumAll, sumAllTests);
