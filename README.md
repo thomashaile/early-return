@@ -14,6 +14,8 @@ This coding pattern is also helpful for other developers reading your code.  Ear
 * [Learning Objectives](#learning-objectives)
 * [An Example](#an-example)
 * [How to Study These](#how-to-study-these)
+  * [Report Files](#report-files)
+  * [Debugging](#debugging)
 * [The Exercises](#the-exercises)
   * [Isolate](#isolate)
   * [Integrate](#integrate)
