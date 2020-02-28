@@ -1,0 +1,10 @@
+{
+    "settings": {
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "boundary",
+        "files.autoSave": "onFocusChange",
+        "files.exclude": {
+            "**/.node_modules": true
+        }
+    }
+}
