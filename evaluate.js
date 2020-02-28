@@ -3,6 +3,15 @@ const fs = require('fs');
 
 const evaluate = (func, testCases) => {
 
+  // -- log JS Tutor link
+  const encoded = encodeURIComponent(func.toString());
+  const sanitized = encoded.replace(/\(/g, '%28').replace(/\)/g, '%29');
+  const deTabbed = sanitized.replace(/%09/g, '%20%20');
+  const url = "http://www.pythontutor.com/live.html#code="
+    + deTabbed
+    + "&cumulative=false&curInstr=2&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false";
+  console.log(`\n--- ${func.name} : JS Tutor Link, cmd+click to open ---\n${url}\n`);
+
   // -- evaluate test cases
   const results = [];
   let passing = 0;
@@ -55,15 +64,6 @@ const evaluate = (func, testCases) => {
     .split(__dirname).join(' [...] ');
 
   fs.writeFileSync(reportFileName, sanitizedReport);
-
-  // -- log JS Tutor link
-  const encoded = encodeURIComponent(func.toString());
-  const sanitized = encoded.replace(/\(/g, '%28').replace(/\)/g, '%29');
-  const deTabbed = sanitized.replace(/%09/g, '%20%20');
-  const url = "http://www.pythontutor.com/live.html#code="
-    + deTabbed
-    + "&cumulative=false&curInstr=2&heapPrimitives=nevernest&mode=display&origin=opt-live.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false";
-  console.log(`\n--- ${func.name} : JS Tutor Link, cmd+click to open ---\n${url}\n`);
 
 }
 

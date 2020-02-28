@@ -86,10 +86,28 @@ console.assert(test1 && test2 && test3 && test4, 'both functions behave the same
 
 Just run the exercise files in node! There are no dependencies or special scripts required.
 
-Each time you run an exercise file, a report will be generated.  It's helpful to open this file and split your editor, with the code on one side and the report on the other.  Each time you run your code, the report will update with the most recent test results.  Seeing the results side-by-side with your code will make debugging and understanding your code a little easier.
+### Report Files
 
-In the console you will find logs for any syntax errors, failing `console.asserts` or `console.logs` from in your function.  Information on each test case (pass, fail or error) will be written to the report file.
+Each time you successfully run an exercise (ie. no syntax / creation phase errors), a report file will be generated.  It's helpful to open this file and split your editor, with the code on one side and the report on the other.  Each time you run your code, the report will update with the most recent test results.  Seeing the results side-by-side with your code will make debugging and understanding your code a little easier.  The report file will contain:
 
+* The name of the file you ran & the date you last ran it.  This is to help you review your exercises in the coming months.
+* A summary of how many test cases fall under each status:
+  1. __PASS__: the code ran without any errors and the test case passed
+  1. __FAIL__: the code ran without any errors, but the test case did not pass
+  1. __ERR__: your function threw an error and did not finish executing
+* There will also be a more detailed report on each test case:
+  * Passing test cases will just say __PASS__.
+  * Failing test cases will show in detail how your function's return value was different from the expected value
+  * Errored test cases will contain a readable call-stack describing what error occurred and where in your code
+
+### Debugging
+
+There are a few possible strategies you can use to debug your exercises:
+
+* Fixing Creation Phase errors (ie. syntax errors).  This type of error message will show up in your terminal and will stop a new report from being generated. To fix these errors you will need to read the logged callstack to find out where the error occurred.
+* Logging & Asserting to understand what happens while your function executes.  All console output will appear in your terminal, but won't show up in the report file.
+* The VSC Debugger, breakpoints & `debugger` statements. This repository comes with a `launch.json` configured to step through whichever file is currently open.
+* Study your function in JS Tutor.  Each time you run an exercise file, a link to open your function in JS Tutor will be generated in the terminal.  The link won't include the test cases, just your function to experiment with.
 
 [TOP](#early-return)
 
@@ -122,11 +140,18 @@ For these exercises you will need to combine early returns with your understandi
 
 ## Helpful Links
 
+### Early Return
+
 * [early return by example](http://wilsonpage.co.uk/return-early/)
 * [FreeCodeCamp early return challenge](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/return-early-pattern-for-functions/)
 * [a reddit discussion about early returns](https://www.reddit.com/r/javascript/comments/2rit4r/early_return_statements_in_functions/)
 * [Tim likes early returns](https://blog.timoxley.com/post/47041269194/avoid-else-return-early)
 * [and Jennifer doesn't](https://dev.to/jenniferlynparsons/early-returns-in-javascript-5hfb)
+
+### Helpful VSC Extensions
+
+* Prettier
+* Brackets Colorizer
 
 ---
 ---
