@@ -45,9 +45,9 @@ const evaluate = (func, testCases) => {
 
   const report = fileName + ' -- '
     + (new Date()).toDateString() + '\n'
-    + '\n- PASS: ' + passing
+    + '\n+ PASS: ' + passing
     + '\n- FAIL: ' + failing
-    + '\n- ERROR: ' + error
+    + '\nx ERROR: ' + error
     + '\n' + results.join('\n');
 
   // -- log report
