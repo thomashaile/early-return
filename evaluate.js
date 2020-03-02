@@ -19,20 +19,20 @@ const evaluate = (func, testCases) => {
   let error = 0;
   for (let test of testCases) {
     console.log('\n-- ' + test.name + ': console output --\n');
-    let testResult = '\n' + test.name + '';
+    let testResult = '\n';
     try { // catch any errors the function might throw
       const actual = func(...test.args);
       const expected = test.expected;
       try { // catch any failed assertions after function runs
         assert.deepStrictEqual(actual, expected);
-        testResult += ': PASS';
+        testResult += '+ ' + test.name + ': PASS';
         passing++;
       } catch (assertionError) {
-        testResult += ' (FAIL): ' + assertionError.message.toString();
+        testResult += '- ' + test.name + ' (FAIL): ' + assertionError.message.toString().split('\n').join('\n  ');
         failing++;
       }
     } catch (runTimeError) {
-      testResult += ' (ERR): ' + runTimeError.stack;
+      testResult += 'x ' + test.name + ' (ERR): ' + runTimeError.stack;
       error++;
     };
     results.push(testResult + '\n');
